@@ -1,23 +1,39 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#121212;color:#fff;max-width:420px;margin:auto;padding-bottom:80px}
-.header{display:flex;justify-content:space-between;align-items:center;padding:20px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px}
-.card{background:#1E1E1E;border-radius:16px;padding:20px;margin:15px}
-.label{color:#888;font-size:14px}
-.sub{color:#888;font-size:12px}
-.solde{font-size:32px;font-weight:700;margin:5px 0}
-.progress-bar{background:#333;height:8px;border-radius:10px;margin:10px 0}
-.progress{height:8px;background:#27AE60;border-radius:10px;width:0%}
-.btn-main{background:#27AE60;color:#fff;border:none;padding:15px;border-radius:12px;width:100%;font-size:16px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}
-.btn-card{padding:0}
-.btn-amount{background:#333;color:#fff;border:2px solid #333;padding:15px;border-radius:12px;width:100%;margin:8px 0;font-size:16px;cursor:pointer}
-.btn-amount.active{border-color:#27AE60;background:#1a2e1f}
-.input{background:#333;border:none;color:#fff;padding:15px;border-radius:12px;width:100%;margin:10px 0;font-size:16px}
-.btn-momo{background:#333;color:#fff;border:none;padding:12px;border-radius:12px;width:49%;display:flex;align-items:center;justify-content:center;gap:5px}
-.row-btn{display:flex;gap:10px;margin-bottom:15px}
-.row{display:flex;justify-content:space-between}
-.right{text-align:right}
-.nav{position:fixed;bottom:0;width:100%;max-width:420px;background:#1E1E1E;display:flex;justify-content:space-around;padding:10px 0}
-.nav-item{text-align:center;color:#888;font-size:12px;cursor:pointer}
-.nav-item.active{color:#27AE60}
-.hidden{display:none}
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+body {background:#F5F5F5; color:#333;}
+.screen {max-width:420px; margin:0 auto; background:#fff; min-height:100vh; padding-bottom:80px;}
+.header {display:flex; justify-content:space-between; align-items:center; padding:20px;}
+.header .user {display:flex; gap:10px; align-items:center;}
+.header .user img {width:40px; height:40px; border-radius:50%;}
+.header .user h2 {font-size:16px; font-weight:600;}
+.header .user p {font-size:12px; color:#888;}
+.header-icons {display:flex; gap:15px;}
+
+.card-balance {
+  background: linear-gradient(135deg, #008751 0%, #00A86B 100%);
+  margin:0 20px; padding:25px; border-radius:20px; color:white;
+}
+.card-balance .label {font-size:12px; opacity:0.8;}
+.card-balance .solde {font-size:28px; font-weight:700; margin:8px 0;}
+.card-balance .bonus {font-size:12px; opacity:0.9;}
+
+.section-title {padding:20px 20px 10px; font-size:14px; font-weight:600; color:#555;}
+.bank-card {
+  background:white; margin:0 20px 10px; padding:15px; border-radius:15px; 
+  border:1px solid #eee; display:flex; justify-content:space-between; align-items:center;
+}
+.bank-card .bank-info .name {font-weight:600; font-size:14px;}
+.bank-card .bank-info .num {font-size:12px; color:#888;}
+.bank-card .amount {font-size:18px; font-weight:700;}
+
+.quick-services {padding:0 20px; display:grid; grid-template-columns:repeat(3, 1fr); gap:15px;}
+.service {display:flex; flex-direction:column; align-items:center; gap:8px; font-size:12px; color:#555;}
+.service-icon {
+  width:55px; height:55px; background:#F0F9F5; border-radius:15px; 
+  display:flex; align-items:center; justify-content:center; color:#008751;
+}
+
+.nav {position:fixed; bottom:0; width:100%; max-width:420px; background:white; display:flex; justify-content:space-around; padding:10px 0; border-top:1px solid #eee;}
+.nav-item {display:flex; flex-direction:column; align-items:center; font-size:10px; color:#888; gap:4px;}
+.nav-item.active {color:#008751;}
+.btn-main {background:#008751; color:white; border:none; width:100%; padding:15px; border-radius:12px; font-weight:600; margin-top:15px;}
+.hidden {display:none;}
