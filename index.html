@@ -1,64 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tantine Congolaise</title><link rel="stylesheet" href="style.css">
-<script src="https://unpkg.com/lucide@latest"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-<div id="accueil" class="screen">
-  <div class="header">
-    <div class="user">
-      <img src="https://i.pravatar.cc/100" alt="user">
-      <div><p>Good morning 👋</p><h2 id="username">Tantine</h2></div>
-    </div>
-    <div class="header-icons"><i data-lucide="bell"></i></div>
-  </div>
-
-  <div class="card-balance">
-    <div class="label">Solde Total</div>
-    <div class="solde" id="solde">0 FCFA</div>
-    <div class="bonus">Bonus épargne: 0 FCFA</div>
-  </div>
-
-  <div class="section-title">Mes Épargnes</div>
-  <div class="bank-card">
-    <div class="bank-info">
-      <div class="name">Objectif 6 Mois</div>
-      <div class="num">500 FCFA / jour</div>
-    </div>
-    <div class="amount" id="epargne">0 FCFA</div>
-  </div>
-
-  <div class="section-title">Services Rapides</div>
-  <div class="quick-services">
-    <div class="service" onclick="showScreen('cotiser')"><div class="service-icon"><i data-lucide="plus"></i></div><div>Épargner</div></div>
-    <div class="service"><div class="service-icon"><i data-lucide="arrow-right-left"></i></div><div>Retirer</div></div>
-    <div class="service"><div class="service-icon"><i data-lucide="target"></i></div><div>Objectif</div></div>
-    <div class="service"><div class="service-icon"><i data-lucide="phone"></i></div><div>Crédit</div></div>
-    <div class="service"><div class="service-icon"><i data-lucide="zap"></i></div><div>Électricité</div></div>
-    <div class="service"><div class="service-icon"><i data-lucide="more-horizontal"></i></div><div>Plus</div></div>
-  </div>
-
-  <div class="nav">
-    <div class="nav-item active"><i data-lucide="home"></i><div>Accueil</div></div>
-    <div class="nav-item"><i data-lucide="history"></i><div>Historique</div></div>
-    <div class="nav-item"><i data-lucide="menu"></i><div>Menu</div></div>
-    <div class="nav-item"><i data-lucide="user"></i><div>Profil</div></div>
+<!-- 0. ECRAN INSCRIPTION -->
+<div id="inscription" class="screen">
+  <div style="padding:40px 20px; text-align:center;">
+    <h2 style="color:#008751; margin-bottom:10px;">Bienvenue sur Tantine</h2>
+    <p style="color:#888; margin-bottom:30px;">Crée ton compte en 10 secondes</p>
+    
+    <input id="nom" type="text" placeholder="Nom et Prénom" style="width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd; border-radius:12px;">
+    <input id="telephone" type="tel" placeholder="Numéro MTN / Airtel" style="width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd; border-radius:12px;">
+    <input id="email" type="email" placeholder="Adresse Email" style="width:100%; padding:15px; margin-bottom:20px; border:1px solid #ddd; border-radius:12px;">
+    
+    <button class="btn-main" onclick="creerCompte()">Créer mon compte</button>
   </div>
 </div>
-
-<div id="cotiser" class="screen hidden">
-  <div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Épargner</h2></div>
-  <div style="padding:20px">
-    <button class="btn-main" onclick="selectMontant(250)">Épargner 250 FCFA</button>
-    <button class="btn-main" onclick="selectMontant(500)">Épargner 500 FCFA</button>
-    <button class="btn-main" onclick="selectMontant(1000)">Épargner 1000 FCFA</button>
-  </div>
-</div>
-
-<script src="app.js"></script>
-<script>lucide.createIcons();</script>
-</body>
-                                                                              </html>
