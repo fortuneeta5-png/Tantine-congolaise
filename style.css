@@ -1,0 +1,23 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#121212;color:#fff;max-width:420px;margin:auto;padding-bottom:80px}
+.header{display:flex;justify-content:space-between;align-items:center;padding:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px}
+.card{background:#1E1E1E;border-radius:16px;padding:20px;margin:15px}
+.label{color:#888;font-size:14px}
+.sub{color:#888;font-size:12px}
+.solde{font-size:32px;font-weight:700;margin:5px 0}
+.progress-bar{background:#333;height:8px;border-radius:10px;margin:10px 0}
+.progress{height:8px;background:#27AE60;border-radius:10px;width:0%}
+.btn-main{background:#27AE60;color:#fff;border:none;padding:15px;border-radius:12px;width:100%;font-size:16px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}
+.btn-card{padding:0}
+.btn-amount{background:#333;color:#fff;border:2px solid #333;padding:15px;border-radius:12px;width:100%;margin:8px 0;font-size:16px;cursor:pointer}
+.btn-amount.active{border-color:#27AE60;background:#1a2e1f}
+.input{background:#333;border:none;color:#fff;padding:15px;border-radius:12px;width:100%;margin:10px 0;font-size:16px}
+.btn-momo{background:#333;color:#fff;border:none;padding:12px;border-radius:12px;width:49%;display:flex;align-items:center;justify-content:center;gap:5px}
+.row-btn{display:flex;gap:10px;margin-bottom:15px}
+.row{display:flex;justify-content:space-between}
+.right{text-align:right}
+.nav{position:fixed;bottom:0;width:100%;max-width:420px;background:#1E1E1E;display:flex;justify-content:space-around;padding:10px 0}
+.nav-item{text-align:center;color:#888;font-size:12px;cursor:pointer}
+.nav-item.active{color:#27AE60}
+.hidden{display:none}
