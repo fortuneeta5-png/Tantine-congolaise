@@ -1,79 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tantine Congolaise</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tantine Congolaise</title><link rel="stylesheet" href="style.css">
 <script src="https://unpkg.com/lucide@latest"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <div id="accueil" class="screen">
   <div class="header">
-    <div class="logo"><i data-lucide="piggy-bank"></i> Tantine Congolaise</div>
-    <i data-lucide="bell"></i>
+    <div class="user">
+      <img src="https://i.pravatar.cc/100" alt="user">
+      <div><p>Good morning 👋</p><h2 id="username">Tantine</h2></div>
+    </div>
+    <div class="header-icons"><i data-lucide="bell"></i></div>
   </div>
-  
-  <div class="card">
-    <p class="label">Solde Total</p>
+
+  <div class="card-balance">
+    <div class="label">Solde Total</div>
     <div class="solde" id="solde">0 FCFA</div>
-    <p class="sub">Commencez votre épargne dès aujourd'hui</p>
+    <div class="bonus">Bonus épargne: 0 FCFA</div>
   </div>
 
-  <div class="card">
-    <h3><i data-lucide="target"></i> Objectif 6 Mois</h3>
-    <p class="sub">Construisez votre épargne petit à petit.</p>
-    <div class="progress-bar"><div class="progress" id="progress"></div></div>
-    <div class="row">
-      <span id="jours">0 / 180 jours</span>
-      <span id="pourcent">0%</span>
+  <div class="section-title">Mes Épargnes</div>
+  <div class="bank-card">
+    <div class="bank-info">
+      <div class="name">Objectif 6 Mois</div>
+      <div class="num">500 FCFA / jour</div>
     </div>
-    <div class="row" style="margin-top:15px">
-      <div>
-        <p class="label">Montant épargné</p>
-        <h2 id="epargne">0 FCFA</h2>
-      </div>
-      <div class="right">
-        <p class="label">Objectif</p>
-        <h2>90 000 FCFA</h2>
-      </div>
-    </div>
+    <div class="amount" id="epargne">0 FCFA</div>
   </div>
 
-  <div class="card btn-card">
-    <button class="btn-main" onclick="showScreen('cotiser')">
-      <i data-lucide="plus-circle"></i> Épargner
-    </button>
+  <div class="section-title">Services Rapides</div>
+  <div class="quick-services">
+    <div class="service" onclick="showScreen('cotiser')"><div class="service-icon"><i data-lucide="plus"></i></div><div>Épargner</div></div>
+    <div class="service"><div class="service-icon"><i data-lucide="arrow-right-left"></i></div><div>Retirer</div></div>
+    <div class="service"><div class="service-icon"><i data-lucide="target"></i></div><div>Objectif</div></div>
+    <div class="service"><div class="service-icon"><i data-lucide="phone"></i></div><div>Crédit</div></div>
+    <div class="service"><div class="service-icon"><i data-lucide="zap"></i></div><div>Électricité</div></div>
+    <div class="service"><div class="service-icon"><i data-lucide="more-horizontal"></i></div><div>Plus</div></div>
+  </div>
+
+  <div class="nav">
+    <div class="nav-item active"><i data-lucide="home"></i><div>Accueil</div></div>
+    <div class="nav-item"><i data-lucide="history"></i><div>Historique</div></div>
+    <div class="nav-item"><i data-lucide="menu"></i><div>Menu</div></div>
+    <div class="nav-item"><i data-lucide="user"></i><div>Profil</div></div>
   </div>
 </div>
 
 <div id="cotiser" class="screen hidden">
   <div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Épargner</h2></div>
-  <div class="card">
-    <h3>Choisissez le montant</h3>
-    <button class="btn-amount" onclick="selectMontant(250)">250 FCFA</button>
-    <button class="btn-amount active" onclick="selectMontant(500)">500 FCFA</button>
-    <button class="btn-amount" onclick="selectMontant(1000)">1000 FCFA</button>
+  <div style="padding:20px">
+    <button class="btn-main" onclick="selectMontant(250)">Épargner 250 FCFA</button>
+    <button class="btn-main" onclick="selectMontant(500)">Épargner 500 FCFA</button>
+    <button class="btn-main" onclick="selectMontant(1000)">Épargner 1000 FCFA</button>
   </div>
-  <div class="card">
-    <h3>Votre numéro Mobile Money</h3>
-    <input type="tel" id="telephone" placeholder="06 123 4567" class="input">
-    <div class="row-btn">
-      <button class="btn-momo"><i data-lucide="smartphone"></i> MTN Money</button>
-      <button class="btn-momo"><i data-lucide="smartphone"></i> Airtel Money</button>
-    </div>
-    <button class="btn-main" onclick="payer()">Confirmer le paiement</button>
-  </div>
-</div>
-
-<div class="nav">
-  <div class="nav-item active" onclick="showScreen('accueil')"><i data-lucide="home"></i><div>Accueil</div></div>
-  <div class="nav-item" onclick="showScreen('cotiser')"><i data-lucide="wallet"></i><div>Cotiser</div></div>
-  <div class="nav-item"><i data-lucide="briefcase"></i><div>Projet</div></div>
 </div>
 
 <script src="app.js"></script>
+<script>lucide.createIcons();</script>
 </body>
-                                      </html>
+                                                                              </html>
