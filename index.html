@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tantine Congolaise</title>
+<title>Tantine-Congolaise</title>
 <script src="https://unpkg.com/lucide@latest"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -10,7 +10,8 @@
 .screen{max-width:420px; margin:auto; background:white; min-height:100vh; padding-bottom:90px}
 .hidden{display:none}
 .header{display:flex; justify-content:space-between; align-items:center; padding:15px 20px}
-.user{display:flex; align-items:center; gap:10px; cursor:pointer}.user img{width:45px; height:45px; border-radius:50%}
+.user{display:flex; align-items:center; gap:10px; cursor:pointer}.user img{width:45px; height:45px; border-radius:50%; object-fit:cover; border:2px solid #008751}
+.logo-title{display:flex; align-items:center; gap:8px; font-weight:700; color:#008751; font-size:16px}
 .card-balance{background:#008751; color:white; border-radius:20px; padding:20px; margin:15px 20px}
 .solde{font-size:32px; font-weight:700; margin:8px 0}
 .bank-card{background:white; border:1px solid #eee; border-radius:16px; padding:15px; margin:15px 20px; display:flex; justify-content:space-between; align-items:center; cursor:pointer}
@@ -22,7 +23,7 @@
 .nav-item{text-align:center; color:#888; cursor:pointer; font-size:12px}.nav-item.active{color:#008751}
 .btn-main{width:100%; padding:16px; background:#008751; color:white; border:none; border-radius:12px; font-weight:600; font-size:16px; margin-bottom:12px}
   input{width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd; border-radius:12px; box-sizing:border-box}
- .info-box{background:#E8F5F0; padding:15px; border-radius:12px; margin-bottom:15px; color:#008751; font-size:14px}
+.info-box{background:#E8F5F0; padding:15px; border-radius:12px; margin-bottom:15px; color:#008751; font-size:14px}
 </style>
 </head>
 <body>
@@ -30,8 +31,10 @@
 <!-- 0. INSCRIPTION -->
 <div id="inscription" class="screen">
   <div style="padding:40px 20px; text-align:center;">
-    <h2 style="color:#008751;">Bienvenue sur Tantine</h2>
-    <p style="color:#888; margin-bottom:30px;">Crée ton compte en 10 secondes</p>
+    <div class="logo-title" style="justify-content:center; font-size:22px; margin-bottom:10px">
+      <img src="https://placehold.co/40x40/008751/FFFFFF/png?text=TC" style="border-radius:8px"> Tantine-Congolaise
+    </div>
+    <p style="color:#888; margin-bottom:30px;">Ton épargne en toute sécurité</p>
     <input id="nom" type="text" placeholder="Nom et Prénom">
     <input id="telephone" type="tel" placeholder="Numéro MTN / Airtel">
     <input id="email" type="email" placeholder="Adresse Email">
@@ -42,17 +45,19 @@
 <!-- 1. ACCUEIL -->
 <div id="accueil" class="screen hidden">
   <div class="header">
-    <div class="user" onclick="changeName()"><img src="https://i.pravatar.cc/100">
+    <div class="user" onclick="changeName()">
+      <!-- LOGO TANTINE AU LIEU DE PHOTO RANDOM -->
+      <img src="https://placehold.co/100x100/008751/FFFFFF/png?text=TC" alt="Tantine-Congolaise">
       <div><p style="margin:0; color:#888; font-size:13px">Good morning 👋</p><h2 id="username" style="margin:0; font-size:18px">Tantine</h2></div>
     </div>
-    <i data-lucide="bell" onclick="showScreen('notif')"></i>
+    <div class="logo-title"><img src="https://placehold.co/30x30/008751/FFFFFF/png?text=TC" style="border-radius:6px"> TC</div>
   </div>
   <div class="card-balance">
-    <div style="opacity:0.8">Solde Total</div>
+    <div style="opacity:0.8">Solde Total - Tantine-Congolaise</div>
     <div class="solde" id="solde">0 FCFA</div>
     <div style="opacity:0.8; font-size:14px">Bonus épargne: <span id="bonus">0</span> FCFA</div>
   </div>
-  <div class="section-title">Mes Épargnes</div>
+  <div class="section-title">Mes Épargnes Tantine-Congolaise</div>
   <div class="bank-card" onclick="showScreen('objectif')">
     <div><div style="font-weight:600">Objectif 6 Mois</div><div style="color:#888; font-size:13px">500 FCFA / jour</div></div>
     <div style="font-weight:700; font-size:18px" id="epargne">0 FCFA</div>
@@ -75,7 +80,7 @@
 </div>
 
 <!-- 2. ECRAN ÉPARGNER -->
-<div id="cotiser" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Épargner</h2></div>
+<div id="cotiser" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Épargner avec Tantine-Congolaise</h2></div>
   <div style="padding:20px">
     <button class="btn-main" onclick="ouvrirPaiement(250, 'epargne')">250 FCFA</button>
     <button class="btn-main" onclick="ouvrirPaiement(500, 'epargne')">500 FCFA</button>
@@ -85,7 +90,7 @@
 </div>
 
 <!-- 3. ECRAN RETIRER -->
-<div id="retirer" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Retirer</h2></div>
+<div id="retirer" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Retrait Tantine-Congolaise</h2></div>
   <div style="padding:20px">
     <input id="montantRetrait" type="number" placeholder="Montant à retirer">
     <button class="btn-main" onclick="ouvrirRetrait()">Continuer</button>
@@ -103,12 +108,12 @@
 </div>
 
 <!-- 5. AUTRES PAGES -->
-<div id="objectif" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Objectifs</h2></div><div style="padding:20px">Crée des objectifs: École, Loyer, Mariage</div></div>
-<div id="credit" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Crédit</h2></div><div style="padding:20px">Achat crédit MTN / Airtel</div></div>
-<div id="electricite" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Électricité</h2></div><div style="padding:20px">Paiement facture SNE</div></div>
+<div id="objectif" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Objectifs Tantine-Congolaise</h2></div><div style="padding:20px">Crée des objectifs: École, Loyer, Mariage</div></div>
+<div id="credit" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Crédit Tantine-Congolaise</h2></div><div style="padding:20px">Achat crédit MTN / Airtel</div></div>
+<div id="electricite" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Électricité Tantine-Congolaise</h2></div><div style="padding:20px">Paiement facture SNE</div></div>
 <div id="plus" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Plus</h2></div><div style="padding:20px">Paramètres, Aide</div></div>
-<div id="historique" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Historique</h2></div><div id="listeHistorique" style="padding:20px"></div></div>
-<div id="menu" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Menu</h2></div><div style="padding:20px">À propos, Déconnexion</div></div>
+<div id="historique" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Historique Tantine-Congolaise</h2></div><div id="listeHistorique" style="padding:20px"></div></div>
+<div id="menu" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Menu</h2></div><div style="padding:20px">À propos de Tantine-Congolaise</div></div>
 <div id="profil" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Profil</h2></div><div style="padding:20px" id="profilInfo"></div></div>
 <div id="notif" class="screen hidden"><div class="header"><i data-lucide="arrow-left" onclick="showScreen('accueil')"></i> <h2>Notifications</h2></div><div style="padding:20px">Aucune notification</div></div>
 
@@ -118,9 +123,7 @@ let solde = parseInt(localStorage.getItem('solde')) || 0;
 let epargne = parseInt(localStorage.getItem('epargne')) || 0;
 let bonus = parseInt(localStorage.getItem('bonus')) || 0;
 let historique = JSON.parse(localStorage.getItem('historique')) || [];
-let tempMontant = 0; // stocke le montant en cours
-let tempType = ''; // 'epargne' ou 'retrait'
-let ecranRetour = 'accueil';
+let tempMontant = 0; let tempType = ''; let ecranRetour = 'accueil';
 
 window.onload = () => {
   if(!user) { showScreen('inscription'); }
@@ -143,7 +146,7 @@ function updateUI() {
   document.getElementById('epargne').innerText = epargne.toLocaleString() + ' FCFA';
   document.getElementById('bonus').innerText = bonus.toLocaleString();
   document.getElementById('username').innerText = user.nom.split(' ')[0];
-  document.getElementById('profilInfo').innerHTML = `<b>Nom:</b> ${user.nom}<br><b>Tél:</b> ${user.telephone}<br><b>Email:</b> ${user.email}`;
+  document.getElementById('profilInfo').innerHTML = `<div style="text-align:center"><img src="https://placehold.co/80x80/008751/FFFFFF/png?text=TC" style="border-radius:12px; margin-bottom:10px"><br><b>Nom:</b> ${user.nom}<br><b>Tél:</b> ${user.telephone}<br><b>Email:</b> ${user.email}</div>`;
 }
 
 function showScreen(id) {
@@ -158,13 +161,10 @@ function setActive(el) {
   el.classList.add('active');
 }
 
-// NOUVELLE LOGIQUE PAIEMENT
 function ouvrirPaiement(montant, type) {
-  tempMontant = montant;
-  tempType = type;
-  ecranRetour = 'cotiser';
+  tempMontant = montant; tempType = type; ecranRetour = 'cotiser';
   document.getElementById('titreConfirm').innerText = "Confirmer Épargne";
-  document.getElementById('messageInfo').innerText = `Vous allez épargner ${montant} FCFA`;
+  document.getElementById('messageInfo').innerText = `Tantine-Congolaise: Vous allez épargner ${montant} FCFA`;
   document.getElementById('numeroConfirm').value = user.telephone;
   showScreen('confirmation');
 }
@@ -173,11 +173,9 @@ function ouvrirRetrait() {
   let montant = parseInt(document.getElementById('montantRetrait').value);
   if(!montant || montant <= 0) { alert("Entrez un montant"); return; }
   if(montant > solde) { alert("Solde insuffisant"); return; }
-  tempMontant = montant;
-  tempType = 'retrait';
-  ecranRetour = 'retirer';
+  tempMontant = montant; tempType = 'retrait'; ecranRetour = 'retirer';
   document.getElementById('titreConfirm').innerText = "Confirmer Retrait";
-  document.getElementById('messageInfo').innerText = `Vous allez retirer ${montant} FCFA`;
+  document.getElementById('messageInfo').innerText = `Tantine-Congolaise: Vous allez retirer ${montant} FCFA`;
   document.getElementById('numeroConfirm').value = user.telephone;
   showScreen('confirmation');
 }
@@ -187,28 +185,21 @@ function confirmerTransaction() {
   if(numero.length < 9) { alert("Numéro invalide"); return; }
 
   if(tempType === 'epargne') {
-    solde += tempMontant;
-    epargne += tempMontant;
-    bonus += Math.floor(tempMontant * 0.05);
-    historique.unshift({type: "Dépôt", montant: tempMontant, numero: numero, date: new Date().toLocaleString()});
+    solde += tempMontant; epargne += tempMontant; bonus += Math.floor(tempMontant * 0.05);
+    historique.unshift({type: "Dépôt Tantine-Congolaise", montant: tempMontant, numero: numero, date: new Date().toLocaleString()});
     sauvegarder();
-    alert(`✅ Vérifiez votre téléphone pour confirmer votre paiement de ${tempMontant} FCFA`);
+    alert(`✅ Tantine-Congolaise\nVérifiez votre téléphone pour confirmer votre paiement de ${tempMontant} FCFA`);
   }
-
   if(tempType === 'retrait') {
     solde -= tempMontant;
-    historique.unshift({type: "Retrait", montant: tempMontant, numero: numero, date: new Date().toLocaleString()});
+    historique.unshift({type: "Retrait Tantine-Congolaise", montant: tempMontant, numero: numero, date: new Date().toLocaleString()});
     sauvegarder();
-    alert(`✅ Vérifiez votre téléphone. Vous avez reçu ${tempMontant} FCFA`);
+    alert(`✅ Tantine-Congolaise\nVérifiez votre téléphone. Vous avez reçu ${tempMontant} FCFA`);
   }
-
-  document.getElementById('montantRetrait').value = "";
-  showScreen('accueil');
+  document.getElementById('montantRetrait').value = ""; showScreen('accueil');
 }
 
-function retourEcran() {
-  showScreen(ecranRetour);
-}
+function retourEcran() { showScreen(ecranRetour); }
 
 function afficherHistorique() {
   let liste = document.getElementById('listeHistorique');
@@ -226,4 +217,4 @@ function sauvegarder() {
 }
 </script>
 </body>
-  </html>
+                                                              </html>
